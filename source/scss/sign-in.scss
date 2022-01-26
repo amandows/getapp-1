@@ -1,0 +1,535 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+//______________________________________________________________
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+}
+a, li {
+  text-decoration: none;
+  list-style: none;
+}
+header {
+	font-family: 'Raleway';
+	position: absolute;
+	width: 100%;
+	min-height: 80px;
+	.phone-menu {
+		display: none;
+	}
+	.sub-header {
+		max-width: 1440px;
+		min-height: 80px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.logo {
+			width: 30%;
+		}
+		.menu-nav {
+			width: 40%;
+			.menu-ul {
+				display: flex;
+				justify-content: space-between;
+				li a {
+					transition: all 0.2s ease 0s;
+					display: inline-block;
+					font-size: 15px;
+					line-height: 25px;
+					color: #ffffff
+				}
+				li a:hover {
+					color: #061e37;
+					transform: scale(1.1);
+				}
+				li a:focus {
+					transform: scale(1.1);
+				}
+			}
+		}
+		.div-btn {
+			width: 30%;
+			display: flex;
+			justify-content: flex-end;
+			button {
+				color: #ffffff;
+				background: none;
+				min-width: 80px;
+				min-height: 25px;
+				border: 1px solid #ffffff;
+				border-radius: 2px;
+				transition: all 0.2s ease 0s;
+			}
+			button:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			button:focus {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			button:active {
+				transform: scale(0.9);
+			}
+		}
+	}
+}
+
+//CONTAINER-1------------------------------------//
+
+.container-1 {
+	font-family: "Raleway";
+	width: 100%;
+	min-height: 100vh;
+	background: url('../img/background.webp') center/cover no-repeat;
+	.list-1 {
+		width: 100vw;
+		height: 100vh;
+		margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		.content {
+			margin-top: 60px;
+			min-width: 400px;
+			min-height: 300px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      form {
+				min-width: 400px;
+				min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        h1 {
+          font-size: 28px;
+          color: #061e37;
+          font-weight: 600;
+        }
+        label {
+          font-size: 16px;
+          color: #061e37;
+          font-weight: 500;
+        }
+        label::after {
+          content: " *";
+          font-size: 20px;
+          color: #ff0000;
+        }
+        .email, .password {
+          width: 95%;
+          min-height: 50px;
+          font-size: 14px;
+          color: #061e37;
+          font-weight: 500;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .email:focus, .password:focus {
+          	outline: 2px solid #006cdc;
+        }
+        .sign {
+          cursor: pointer;
+          min-width: 150px;
+          min-height: 35px;
+          border-radius: 5px;
+          background-color: #1de9b6;
+          transition: all 0.2s ease 0s;
+          font-size: 15px;
+          color: #ffffff;
+          font-weight: 700;
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+        .sign:hover {
+          background-color: #17b991;
+        }
+        .sign:active {
+          transform: scale(0.9);
+        }
+        a {
+          font-size: 16px;
+        }
+      }
+		}
+	}
+}
+///////////////////////////////////////////////////////
+         //---------------MEDIA------------//
+///////////////////////////////////////////////////////
+
+
+//--------------1599px------------------//
+
+@media (max-width: 1599px) {
+	header {
+		.sub-header {
+			max-width: 1280px;
+		}
+	}
+}
+
+//--------------1366px------------------//
+
+@media (max-width: 1366px) {
+	header {
+		.sub-header {
+			max-width: 1136px;
+		}
+	}
+}
+
+//--------------1280px------------------//
+
+@media (max-width: 1280px) {
+	header {
+		.sub-header {
+			max-width: 1024px;
+		}
+	}
+}
+
+//--------------1136px------------------//
+
+@media (max-width: 1136px) {
+	header {
+		.sub-header {
+			max-width: 960px;
+		}
+	}
+}
+
+//--------------1024px------------------//
+
+@media (max-width: 1024px) {
+	header {
+		.sub-header {
+			max-width: 854px;
+		}
+	}
+}
+
+//--------------960px------------------//
+
+@media (max-width: 960px) {
+	header {
+		.sub-header {
+			max-width: 720px;
+		}
+	}
+	header {
+		.sub-header {
+			.logo {
+				width: 20%;
+				img {
+					width: 100%;
+				}
+			}
+			.menu-nav {
+				width: 70%;
+				.menu-ul {
+					display: flex;
+					justify-content: space-around;
+				}
+			}
+			.div-btn {
+				width: 10%;
+			}
+		}
+	}
+}
+
+///////////////////////////////////////////////////////
+         //--------MEDIA----PHONE--------//
+///////////////////////////////////////////////////////
+
+@media (max-width: 767px) {
+	header {
+		position: fixed;
+		min-height: 60px;
+		z-index: 100;
+		.sub-header {
+			display: none;
+		}
+		.phone-menu {
+			display: block;
+			.details-phone-menu {
+				max-width: 767px;
+				background-color: #000000;
+				opacity: 0.8;
+				overflow: hidden;
+				summary {
+					display: block;
+					overflow: hidden;
+					list-style: none;
+					min-height: 60px;
+					background: url('../ico/phone-menu.svg') right no-repeat;
+					display: flex;
+					align-items: center;
+					padding: 10px;
+				}
+				.menu-ul {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-around;
+					min-height: 300px;
+					li a {
+						transition: all 0.3s ease 0s;
+						display: inline-block;
+						font-family: 'Raleway';
+						font-weight: 500;
+						font-size: 18px;
+						color: #ffffff;
+						text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+					}
+					li a:active {
+						transform: scale(1.1);
+					}
+					li .div-btn {
+						border: 1px solid #ffffff;
+						padding: 5px 20px;
+						border-radius: 5px;
+					}
+					li .div-btn:active {
+						background-color: aqua;
+					}
+				}
+			}
+			.details-phone-menu[open] summary ~ * {
+				animation: slider-menu 0.5s ease;
+			}
+			@keyframes slider-menu{
+				0% {
+					opacity: 0;
+					transform: translate(0, -100%);
+				}
+				100% {
+					opacity: 1;
+					transform: translate(0, 0);
+				}
+			}
+		}
+	}
+	.container-1 {
+		min-height: 320px;
+		max-height: 100vh;
+		.list-1 {
+			max-width: 95%;
+			min-height: 450px;
+			.content {
+				min-width: 310px;
+				max-width: 400px;
+				min-height: 280px;
+				max-height: 400px;
+	      form {
+					min-width: 310px;
+					max-width: 400px;
+					min-height: 280px;
+					max-height: 400px;
+	        height: 100%;
+	        h1 {
+	          font-size: 22px;
+	          color: #061e37;
+	          font-weight: 600;
+	        }
+	        label {
+	          font-size: 14px;
+	          color: #061e37;
+	          font-weight: 500;
+	        }
+	        label::after {
+	          content: " *";
+	          font-size: 14px;
+	          color: #ff0000;
+	        }
+	        .email, .password {
+	          min-height: 40px;
+	          font-size: 14px;
+	        }
+	        .email:focus, .password:focus {
+	          	outline: 2px solid #006cdc;
+	        }
+	        .sign {
+	          cursor: pointer;
+	          min-width: 150px;
+	          min-height: 35px;
+	        }
+	      }
+			}
+		}
+	}
+}
+
+//-----------PHONE--HORIZONTAL-----------//
+
+@media (max-height: 428px) {
+	header {
+		position: fixed;
+		min-height: 60px;
+		z-index: 100;
+		.sub-header {
+			display: none;
+		}
+		.phone-menu {
+			display: block;
+			.details-phone-menu {
+				width: 100%;
+				background-color: #000000;
+				opacity: 0.8;
+				overflow: hidden;
+				summary {
+					display: block;
+					overflow: hidden;
+					list-style: none;
+					min-height: 60px;
+					background: url('../ico/phone-menu.svg') right no-repeat;
+					display: flex;
+					align-items: center;
+					padding: 10px;
+				}
+				.menu-ul {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-around;
+					min-height: 300px;
+					li a {
+						transition: all 0.3s ease 0s;
+						display: inline-block;
+						font-family: 'Raleway';
+						font-weight: 500;
+						font-size: 18px;
+						color: #ffffff;
+						text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+					}
+					li a:active {
+						transform: scale(1.1);
+					}
+					li .div-btn {
+						border: 1px solid #ffffff;
+						padding: 5px 20px;
+						border-radius: 5px;
+					}
+					li .div-btn:active {
+						background-color: aqua;
+					}
+				}
+			}
+			.details-phone-menu[open] summary ~ * {
+				animation: slider-menu 0.5s ease;
+			}
+			@keyframes slider-menu{
+				0% {
+					opacity: 0;
+					transform: translate(0, -100%);
+				}
+				100% {
+					opacity: 1;
+					transform: translate(0, 0);
+				}
+			}
+		}
+	}
+	.container-1 {
+		min-height: 320px;
+		max-height: 450px;
+		.list-1 {
+			max-width: 95%;
+			min-height: 450px;
+			.content {
+				min-width: 310px;
+				max-width: 400px;
+				min-height: 280px;
+				max-height: 400px;
+	      form {
+					min-width: 310px;
+					max-width: 400px;
+					min-height: 280px;
+					max-height: 400px;
+	        height: 100%;
+	        h1 {
+	          font-size: 22px;
+	          color: #061e37;
+	          font-weight: 600;
+	        }
+	        label {
+	          font-size: 14px;
+	          color: #061e37;
+	          font-weight: 500;
+	        }
+	        label::after {
+	          content: " *";
+	          font-size: 14px;
+	          color: #ff0000;
+	        }
+	        .email, .password {
+	          min-height: 40px;
+	          font-size: 14px;
+	        }
+	        .email:focus, .password:focus {
+	          	outline: 2px solid #006cdc;
+	        }
+	        .sign {
+	          cursor: pointer;
+	          min-width: 150px;
+	          min-height: 35px;
+	        }
+	      }
+			}
+		}
+	}
+}
+
+//-----------PHONE--HORIZONTAL-IPHONE-5---------//
+
+@media (max-height: 320px) {
+	header {
+		.phone-menu {
+			.details-phone-menu {
+				summary {
+				}
+				.menu-ul {
+					min-height: 260px;
+				}
+			}
+		}
+	}
+}
